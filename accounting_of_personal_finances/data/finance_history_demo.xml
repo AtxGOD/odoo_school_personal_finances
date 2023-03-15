@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="finance_atb_history_demo" model="finance.history">
+        <field name="sum">300</field>
+        <field name="shop_id" ref="finance_atb_demo"/>
+    </record>
+    <record id="finance_silpo_history_demo" model="finance.history">
+        <field name="sum">1000</field>
+        <field name="shop_id" ref="finance_silpo_demo"/>
+    </record>
+    <record id="finance_nova_history_demo" model="finance.history">
+        <field name="sum">3000</field>
+        <field name="shop_id" ref="finance_nova_demo"/>
+    </record>
+
+</odoo>

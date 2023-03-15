@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="finance_menu_root"
+              name="Finance"
+              web_icon="accounting_of_personal_finances,static/description/icon.png"
+              sequence="1"/>
+
+</odoo>

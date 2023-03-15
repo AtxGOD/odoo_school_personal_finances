@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="finance_atb_demo" model="finance.shop">
+        <field name="name">ATB</field>
+    </record>
+    <record id="finance_silpo_demo" model="finance.shop">
+        <field name="name">Сільпо</field>
+    </record>
+    <record id="finance_nova_demo" model="finance.shop">
+        <field name="name">NOVA</field>
+    </record>
+
+</odoo>

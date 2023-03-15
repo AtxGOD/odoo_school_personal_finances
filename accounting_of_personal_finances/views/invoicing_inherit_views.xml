@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="finance_debt_history_menu_inherit"
+              name="Debts"
+              parent="account.menu_finance"
+              action="finance_debt_history_action_view"
+              sequence="3"/>
+
+</odoo>

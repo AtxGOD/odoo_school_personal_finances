@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="spending_report" model="ir.actions.report">
+        <field name="name">Spending report</field>
+        <field name="model">finance.history</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">accounting_of_personal_finances.spending_report_view</field>
+        <field name="report_file">accounting_of_personal_finances.spending_report_view</field>
+        <field name="binding_model_id" ref="model_finance_history"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="finance_change_debt_sum_view_form" model="ir.ui.view">
+        <field name="name">change.debt.wizard.form</field>
+        <field name="model">finance.change.debt.sum.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Change sum">
+                <group>
+                    <field name="sum"/>
+                </group>
+                <footer>
+                    <button name="action_change_sum" type="object" string="Change" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_finance_change_debt_sum" model="ir.actions.act_window">
+        <field name="name">Change sum</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">finance.change.debt.sum.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="finance_change_debt_sum_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

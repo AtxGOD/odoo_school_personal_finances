@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="finance_work_demo" model="finance.receipt.source">
+        <field name="name">Work</field>
+    </record>
+    <record id="finance_freelance_demo" model="finance.receipt.source">
+        <field name="name">Freelance</field>
+    </record>
+    <record id="finance_lottery_demo" model="finance.receipt.source">
+        <field name="name">lottery</field>
+    </record>
+
+</odoo>

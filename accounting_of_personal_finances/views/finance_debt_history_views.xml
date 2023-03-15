@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="finance_debt_history_tree" model="ir.ui.view">
+        <field name="name">finance.debt.history.tree</field>
+        <field name="model">finance.debt.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="%(action_finance_change_debt_sum)d" string="Change_sum" class="btn-primary"
+                            type="action"/>
+                </header>
+                <field name="person_id"/>
+                <field name="sum"/>
+                <field name="action"/>
+                <field name="currency"/>
+                <field name="date"/>
+                <field name="done"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="finance_debt_history_form" model="ir.ui.view">
+        <field name="name">finance.debt.history.form</field>
+        <field name="model">finance.debt.history</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="person_id"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="sum"/>
+                            <field name="action"/>
+                            <field name="currency"/>
+                            <field name="date"/>
+                            <field name="done"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="finance_debt_history_view_kanban" model="ir.ui.view">
+            <field name="name">finance.debt.history.kanban</field>
+            <field name="model">finance.debt.history</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" sample="1">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong>Person:</strong>
+                                    <field name="person_id"/>
+                                </div>
+                                <div>
+                                    <strong>Action:</strong>
+                                    <field name="action"/>
+                                </div>
+                                <div>
+                                    <strong>Currency:</strong>
+                                    <field name="currency"/>
+                                </div>
+                                <div>
+                                    <strong>Sum:</strong>
+                                    <field name="sum"/>
+                                </div>
+                                <div>
+                                    <strong>Date:</strong>
+                                    <field name="date"/>
+                                </div>
+                                <div>
+                                    <strong>Done:</strong>
+                                    <field name="done"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    <record id="finance_debt_history_action_view" model="ir.actions.act_window">
+        <field name="name">Debts</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">finance.debt.history</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add new debts</p>
+        </field>
+    </record>
+
+    <menuitem id="finance_debt_history_menu"
+              name="Debts"
+              parent="finance_menu_root"
+              action="finance_debt_history_action_view"
+              sequence="3"/>
+
+</odoo>

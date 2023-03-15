@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="finance_history_tree" model="ir.ui.view">
+        <field name="name">finance.history.tree</field>
+        <field name="model">finance.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="shop_id"/>
+                <field name="sum"/>
+                <field name="currency"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="finance_history_form" model="ir.ui.view">
+        <field name="name">finance.history.form</field>
+        <field name="model">finance.history</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="shop_id"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="sum"/>
+                            <field name="currency"/>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="finance_history_action_view" model="ir.actions.act_window">
+        <field name="name">Spending</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">finance.history</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add new spend</p>
+        </field>
+    </record>
+
+    <menuitem id="finance_history_menu"
+              name="Spending"
+              parent="finance_menu_root"
+              action="finance_history_action_view"
+              sequence="1"/>
+
+</odoo>
